@@ -1,4 +1,4 @@
-import Data.List
+import           Data.List
 
 factorsOf :: Int -> [Int]
 factorsOf n = sort $ concat [ [x, div n  x] | x <- [1..(ceiling . sqrt . fromIntegral) n], n `mod` x == 0]
